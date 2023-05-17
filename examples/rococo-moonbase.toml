@@ -1,0 +1,19 @@
+[settings]
+timeout = 1000
+
+[relaychain]
+chain = "rococo-local"
+
+  [[relaychain.nodes]]
+  name = "alice"
+
+  [[relaychain.nodes]]
+  name = "bob"
+
+[[parachains]]
+id = 1280
+
+  [parachains.collator]
+  name = "moonbase-local"
+  command = "moonbeam"
+  args = ["-lparachain=debug"]
